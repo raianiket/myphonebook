@@ -1,0 +1,171 @@
+@font-face {
+   font-family: myFirstFont;
+   src: url(AlexBrush-Regular.ttf);
+}
+
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  padding: 20px;
+  text-align: center;
+  background:
+		no-repeat center,
+		linear-gradient(#4e4376, #2b5876);
+  background-size: cover;
+  color: white;
+  font-size: 30px;
+}
+
+
+/* Page Content */
+.content {
+	padding: 20px;
+}
+
+p {
+	font-family: myFirstFont;
+}
+
+h4 {
+	text-align: center;
+	color: #330033;
+}
+
+h5 {
+	text-align: center;
+	color: #330033;
+	font-size: 20px;
+}
+
+/* Style for table */
+#allcontacts {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#allcontacts td, #allcontacts th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#allcontacts tr:nth-child(even){background-color: #f2f2f2;}
+
+#allcontacts tr:hover {background-color: #ddd;}
+
+#allcontacts th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #330033;
+  color: white;
+}
+
+/* Style for "Add contact" button */
+.button1 {
+  
+  text-align: center;
+  float: right;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+img{
+  height: 50px;
+}
+
+/* Style for "Update", "Reset" and "Delete" buttons */
+.button2 {
+	background-color: #330033; 
+	color: white;
+  	padding: 16px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	-webkit-transition-duration: 0.4s; 
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+  	border: 2px solid #cbcbb3;
+  	font-size: 12px;
+}
+
+/* Style for "Change contact" button */
+.button3 {
+	background-color: #330033; 
+	color: white;
+  	padding: 16px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	-webkit-transition-duration: 0.4s; 
+  	transition-duration: 0.4s;
+  	cursor: pointer;
+  	border: 2px solid #f5ccff;
+  	font-size: 10px;
+  	display: block;
+  	margin: auto;
+  	border-radius: 50%;
+}
+
+.button1:hover , .button2:hover, .button3:hover {
+  background-color: #ffe6ff;
+  color: #505050;
+}
+
+.input{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type=text],[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-label {
+	color: #330033;
+	font-size: 16px;
+}
+
+
+@media
+only screen and (max-width: 640px) {
+  #allcontacts, #allcontacts th, #allcontacts td, #allcontacts tr, #allcontacts tbody, #allcontacts thead {
+    display: block;
+  }
+  #allcontacts th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  td {
+   
+    position: relative;
+    padding-left: 200px;
+    margin-left: 150px;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 200px;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -150px;
+  }
+  td:nth-of-type(1):before { content: "Name"; }
+  td:nth-of-type(2):before { content: "Phone"; }
+  td:nth-of-type(3):before { content: "Email"; }
+  td:nth-of-type(4):before { content: "Action";}
+}
